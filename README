@@ -1,0 +1,47 @@
+# Fraud Detection Case: Intern Data Scientist Brazil
+
+**Author:** Davi de Souza Santos
+
+Machine Learning solution to identify potentially fraudulent transactions for a financial institution's Fraud Prevention team, built as the written case of an Intern Data Scientist selection process.
+
+---
+## Goals
+
+### Business problem
+
+The Fraud Prevention team of a financial institution has a consolidated process to review suspicious transactions. As the volume of operations grows, this process, which is largely manual, has become inefficient and hard to scale. This creates a double challenge:
+
+- **Financial loss:** fraudulent transactions that are not detected in time.
+- **Customer experience:** legitimate customers whose transactions are wrongly blocked.
+
+The two errors have different costs. A missed fraud (false negative) is a direct loss, while a blocked legitimate transaction (false positive) hurts the customer relationship. Any solution has to balance both, and fraud is a rare event, so a model that simply labels everything as "not fraud" would look accurate while being useless.
+
+The institution wants a Machine Learning solution that automates the identification of potentially fraudulent transactions, using a historical dataset in which part of the transactions were already labeled as fraud.
+
+### Defined Goals
+
+**Main goal:** build a predictive model that classifies each transaction as *fraudulent* or *non-fraudulent*, and use it to classify the January 2026 transactions, which have no label.
+
+**Specific goals:**
+
+1. **Explore the data** (EDA) to understand what separates fraud from legitimate transactions, check data quality, and verify that January 2026 behaves like the 2025 history used for training.
+2. **Engineer features** that capture the patterns found in the EDA, using only information available at the moment of the transaction.
+3. **Train and compare models**, starting from a simple benchmark, and keep the simplest model that performs well and can be explained.
+4. **Evaluate with metrics suited to rare events** (precision, recall, F1 and PR-AUC) on a temporal validation, where the model is trained on earlier periods and tested on later ones, as it would be used in practice.
+5. **Choose and justify a decision threshold** in business terms, balancing undetected fraud against blocked legitimate customers.
+6. **Deliver the results:** the January 2026 base with the classification and a presentation with the method, the results.
+
+**Scope and limits:** the January 2026 base has no labels, so its classification cannot be measured directly. Performance is estimated on held-out periods of 2025, and the conclusions about January rely on the assumption that its behavior is similar to the training data, which is checked in the EDA.
+
+---
+
+## Status
+
+- [x] Case understood and January data inspected
+- [x] README (this file)
+- [x] EDA
+- [ ] Feature engineering
+- [ ] Modeling and validation
+- [ ] Classified January 2026 CSV
+- [ ] Presentation
+- [ ] Submission via Google Forms (deadline: 2026-11-09, 23:59)
